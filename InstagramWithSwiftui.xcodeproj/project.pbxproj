@@ -8,17 +8,27 @@
 
 /* Begin PBXBuildFile section */
 		15A5EAAD2A11FD4F0016C16A /* InstagramWithSwiftuiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A5EAAC2A11FD4F0016C16A /* InstagramWithSwiftuiApp.swift */; };
-		15A5EAAF2A11FD4F0016C16A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A5EAAE2A11FD4F0016C16A /* ContentView.swift */; };
 		15A5EAB12A11FD500016C16A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15A5EAB02A11FD500016C16A /* Assets.xcassets */; };
 		15A5EAB42A11FD500016C16A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15A5EAB32A11FD500016C16A /* Preview Assets.xcassets */; };
+		15A5EAC32A11FF100016C16A /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A5EAC22A11FF100016C16A /* HomeView.swift */; };
+		15A5EACC2A120D7F0016C16A /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A5EACB2A120D7F0016C16A /* MainTabView.swift */; };
+		15A5EACE2A12184C0016C16A /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A5EACD2A12184C0016C16A /* ProfileView.swift */; };
+		15A5EAD12A122F0A0016C16A /* UsersStatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A5EAD02A122F0A0016C16A /* UsersStatView.swift */; };
+		15A5EAD32A12401B0016C16A /* FeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A5EAD22A12401B0016C16A /* FeedView.swift */; };
+		15A5EAD72A12403B0016C16A /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A5EAD62A12403B0016C16A /* FeedCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		15A5EAA92A11FD4F0016C16A /* InstagramWithSwiftui.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstagramWithSwiftui.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		15A5EAAC2A11FD4F0016C16A /* InstagramWithSwiftuiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstagramWithSwiftuiApp.swift; sourceTree = "<group>"; };
-		15A5EAAE2A11FD4F0016C16A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		15A5EAB02A11FD500016C16A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		15A5EAB32A11FD500016C16A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		15A5EAC22A11FF100016C16A /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		15A5EACB2A120D7F0016C16A /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
+		15A5EACD2A12184C0016C16A /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		15A5EAD02A122F0A0016C16A /* UsersStatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersStatView.swift; sourceTree = "<group>"; };
+		15A5EAD22A12401B0016C16A /* FeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedView.swift; sourceTree = "<group>"; };
+		15A5EAD62A12403B0016C16A /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +61,13 @@
 		15A5EAAB2A11FD4F0016C16A /* InstagramWithSwiftui */ = {
 			isa = PBXGroup;
 			children = (
-				15A5EAAC2A11FD4F0016C16A /* InstagramWithSwiftuiApp.swift */,
-				15A5EAAE2A11FD4F0016C16A /* ContentView.swift */,
+				15A5EABE2A11FEB90016C16A /* App */,
+				15A5EAC12A11FEFA0016C16A /* Extensions */,
+				15A5EAC02A11FEF30016C16A /* Services */,
+				15A5EABD2A11FEB30016C16A /* Data */,
+				15A5EABC2A11FEAE0016C16A /* Views */,
+				15A5EABB2A11FEA70016C16A /* ViewModels */,
+				15A5EABA2A11FE9C0016C16A /* Models */,
 				15A5EAB02A11FD500016C16A /* Assets.xcassets */,
 				15A5EAB22A11FD500016C16A /* Preview Content */,
 			);
@@ -65,6 +80,134 @@
 				15A5EAB32A11FD500016C16A /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		15A5EABA2A11FE9C0016C16A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		15A5EABB2A11FEA70016C16A /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		15A5EABC2A11FEAE0016C16A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				15A5EACF2A122EB40016C16A /* Components */,
+				15A5EAC42A120C6F0016C16A /* Authentication */,
+				15A5EAC52A120C7A0016C16A /* Feed */,
+				15A5EAC62A120C830016C16A /* Profile */,
+				15A5EAC72A120C8C0016C16A /* Root */,
+				15A5EAC82A120C9A0016C16A /* Search */,
+				15A5EAC92A120CDC0016C16A /* TabBar */,
+				15A5EACA2A120CE40016C16A /* UploadingPosts */,
+				15A5EABF2A11FECD0016C16A /* Home */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		15A5EABD2A11FEB30016C16A /* Data */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		15A5EABE2A11FEB90016C16A /* App */ = {
+			isa = PBXGroup;
+			children = (
+				15A5EAAC2A11FD4F0016C16A /* InstagramWithSwiftuiApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		15A5EABF2A11FECD0016C16A /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				15A5EAC22A11FF100016C16A /* HomeView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		15A5EAC02A11FEF30016C16A /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		15A5EAC12A11FEFA0016C16A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		15A5EAC42A120C6F0016C16A /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		15A5EAC52A120C7A0016C16A /* Feed */ = {
+			isa = PBXGroup;
+			children = (
+				15A5EAD22A12401B0016C16A /* FeedView.swift */,
+				15A5EAD62A12403B0016C16A /* FeedCell.swift */,
+			);
+			path = Feed;
+			sourceTree = "<group>";
+		};
+		15A5EAC62A120C830016C16A /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				15A5EACD2A12184C0016C16A /* ProfileView.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		15A5EAC72A120C8C0016C16A /* Root */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Root;
+			sourceTree = "<group>";
+		};
+		15A5EAC82A120C9A0016C16A /* Search */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		15A5EAC92A120CDC0016C16A /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				15A5EACB2A120D7F0016C16A /* MainTabView.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		15A5EACA2A120CE40016C16A /* UploadingPosts */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UploadingPosts;
+			sourceTree = "<group>";
+		};
+		15A5EACF2A122EB40016C16A /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				15A5EAD02A122F0A0016C16A /* UsersStatView.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +280,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				15A5EAAF2A11FD4F0016C16A /* ContentView.swift in Sources */,
+				15A5EAD72A12403B0016C16A /* FeedCell.swift in Sources */,
+				15A5EACE2A12184C0016C16A /* ProfileView.swift in Sources */,
 				15A5EAAD2A11FD4F0016C16A /* InstagramWithSwiftuiApp.swift in Sources */,
+				15A5EAC32A11FF100016C16A /* HomeView.swift in Sources */,
+				15A5EAD12A122F0A0016C16A /* UsersStatView.swift in Sources */,
+				15A5EAD32A12401B0016C16A /* FeedView.swift in Sources */,
+				15A5EACC2A120D7F0016C16A /* MainTabView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
