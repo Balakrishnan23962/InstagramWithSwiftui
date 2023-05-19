@@ -13,8 +13,8 @@ struct SearchView: View {
         NavigationStack {
             ScrollView{
                 LazyVStack(spacing: 15) {
-                    ForEach(0 ... 10, id: \.self){ user in
-                        SearchProfile()
+                    ForEach(MockUsers().user, id: \.id){ user in
+                        SearchProfile(user: user)
                     }
                 }
                 .padding(.top)

@@ -6,31 +6,41 @@
 //
 
 import SwiftUI
+import Kingfisher
 
 struct SearchProfile: View {
+    var user: User
     var body: some View {
-        HStack {
-            Image("gojo")
-                .resizable()
-                .scaledToFill()
-                .frame(width: 40,height: 40)
-            .clipShape(Circle())
-            VStack(alignment: .leading,spacing: 1){
-                Group {
-                    Text("Venom")
-                        .fontWeight(.semibold)
-                    Text("Eddie Brock")
+        NavigationLink(value: user, label: {
+            HStack {
+                Image(user.profileImageUrl ?? "")
+                    .resizable()
+                    .scaledToFill()
+                    .frame(width: 40,height: 40)
+                .clipShape(Circle())
+                VStack(alignment: .leading,spacing: 1){
+                    Group {
+                        Text(user.userName)
+                            .fontWeight(.semibold)
+                        if let fullName = user.fullName {
+                            Text(fullName)
+                        }
+                    }
+                    .font(.footnote)
                 }
-                .font(.footnote)
+                Spacer()
             }
-            Spacer()
-        }
+        })
+        .tint(.black)
         .padding(.horizontal)
+        .navigationDestination(for: User.self) { user in
+            ProfileView(user: user)
+        }
     }
 }
 
 struct SearchProfile_Previews: PreviewProvider {
     static var previews: some View {
-        SearchProfile()
+        SearchProfile(user: MockUsers().user[1])
     }
 }

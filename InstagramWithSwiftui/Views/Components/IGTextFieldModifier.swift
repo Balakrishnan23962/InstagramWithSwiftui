@@ -19,3 +19,15 @@ struct IGTextFieldModifier : ViewModifier {
             .padding(.top,4)
     }
 }
+
+struct IGButtonFieldModifier: ViewModifier {
+    func body(content: Content) -> some View {
+        content
+            .font(.subheadline)
+            .fontWeight(.semibold)
+            .frame(width: 380, height: 44)
+            .background(Color(.systemBlue))
+            .cornerRadius(8)
+            .foregroundColor(.white)
+    }
+}

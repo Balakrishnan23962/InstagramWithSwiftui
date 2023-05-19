@@ -10,6 +10,8 @@ import SwiftUI
 struct LoginView: View {
     @State var email = ""
     @State var password = ""
+    @State var currentPage = 0
+  
     var body: some View {
         NavigationStack{
             VStack{
@@ -31,7 +33,6 @@ struct LoginView: View {
                 } label: {
                     Text("Forgot Password?")
                         .font(.footnote)
-                        .fontWeight(.semibold)
                         .padding(.top)
                         .padding(.trailing,28)
                 }
@@ -41,12 +42,7 @@ struct LoginView: View {
                     
                 } label: {
                     Text("Log in")
-                        .font(.subheadline)
-                        .fontWeight(.semibold)
-                        .frame(width: 360, height: 44)
-                        .background(Color(.systemBlue))
-                        .cornerRadius(8)
-                        .foregroundColor(.white)
+                        .modifier(IGButtonFieldModifier())
                 }
                 .padding(.vertical)
                 
@@ -82,6 +78,7 @@ struct LoginView: View {
                     NavigationLink {
                        AddEmailView()
                             .navigationBarBackButtonHidden(true)
+                        
                     } label: {
                         Text("Sign Up")
                             .fontWeight(.semibold)
@@ -92,6 +89,7 @@ struct LoginView: View {
                 .padding(.vertical,16)
             }
         }
+      
     }
 }
 
