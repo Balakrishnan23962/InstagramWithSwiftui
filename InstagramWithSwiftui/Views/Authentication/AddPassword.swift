@@ -10,9 +10,8 @@ import SwiftUI
 struct AddPassword: View {
     
     @Environment(\.dismiss) var dismiss
-    
-    @State var password = ""
-    @StateObject var viewModel = SignUpFlowViewModel()
+    @EnvironmentObject var viewModel: RegistrationViewModel
+
     var body: some View {
         VStack(spacing: 13){
             Text("Create a password")
@@ -26,7 +25,7 @@ struct AddPassword: View {
                 .padding(.horizontal,24)
                 .padding([.leading,.trailing])
 
-            SecureField("Password", text: $password)
+            SecureField("Password", text: $viewModel.password)
                 .modifier(IGTextFieldModifier())
 
             NavigationLink {
@@ -56,5 +55,6 @@ struct AddPassword: View {
 struct AddPassword_Previews: PreviewProvider {
     static var previews: some View {
         AddPassword()
+            .environmentObject(RegistrationViewModel())
     }
 }

@@ -57,15 +57,15 @@ struct FeedCell: View {
             .foregroundColor(.black)
 
 
-            Text("23 likes")
+            Text("^[\(post.likes) like](inflect:true)")
                 .font(.footnote)
                 .fontWeight(.semibold)
                 .frame(maxWidth: .infinity,alignment: .leading)
                 .padding(.leading,10)
                 .padding(.top,1)
             Group {
-                Text("Batman ").fontWeight(.semibold) +
-                Text("This is testing")
+                Text("\(post.user?.userName ?? "") ").fontWeight(.semibold) +
+                Text("\(post.caption)")
             }
             .font(.footnote)
             .frame(maxWidth: .infinity,alignment: .leading)

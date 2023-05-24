@@ -9,16 +9,22 @@ import SwiftUI
 
 struct SearchView: View {
     @State var searchText = ""
+    @StateObject var viewModel = SearchViewModel()
     var body: some View {
         NavigationStack {
             ScrollView{
-                LazyVStack(spacing: 15) {
-                    ForEach(MockUsers().user, id: \.id){ user in
-                        SearchProfile(user: user)
+                if !viewModel.isLoading {
+                    LazyVStack(spacing: 15) {
+                        ForEach(viewModel.users, id: \.id){ user in
+                            SearchProfile(user: user)
+                        }
                     }
-                }
-                .padding(.top)
+                    .padding(.top)
                 .searchable(text: $searchText, prompt: "Search")
+                }
+                else{
+                   ProgressView()
+                }
             }
             .navigationTitle("Explore")
             .navigationBarTitleDisplayMode(.inline)
