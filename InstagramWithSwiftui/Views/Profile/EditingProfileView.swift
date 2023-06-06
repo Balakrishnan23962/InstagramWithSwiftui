@@ -24,16 +24,22 @@ struct EditingProfileView: View {
                 Spacer()
                 Text("Edit Profile")
                 Spacer()
-                Button {
-                    Task{
-                        try await viewModel.updateUserData()
-                    }
-                } label: {
-                    Text("Done")
-                        .font(.headline)
-                        .fontWeight(.bold)
+                if viewModel.isLoading {
+                    ProgressView()
                 }
-                
+                else {
+                    Button {
+                        Task{
+                            try await viewModel.updateUserData()
+                            dismiss()
+                        }
+                    } label: {
+                        Text("Done")
+                            .font(.headline)
+                            .fontWeight(.bold)
+                    }
+
+                }
             }
             .padding(.horizontal)
             Divider()
@@ -49,12 +55,7 @@ struct EditingProfileView: View {
                             .clipShape(Circle())
                     }
                     else {
-                        Image(systemName: "person")
-                            .resizable()
-                            .foregroundColor(.white)
-                            .background(.gray)
-                            .frame(width: 80, height: 80)
-                            .clipShape(Circle())
+                        PlaceHolderView(user: viewModel.user)
                     }
                     Text("Edit Profile Picture")
                         .font(.footnote)

@@ -15,8 +15,8 @@ class MockUsers {
    init() {
        self.user = [
         User(id: NSUUID().uuidString,
-                         userName: "Bala", profileImageUrl: "lugia", fullName: "Balakrishnan", bio: "Nothing", email: "bksnmka3B#"),
-        User(id: NSUUID().uuidString, userName: "Guna", profileImageUrl: "gojo", fullName: "Gojo satoru", bio: "Gotham knights", email: "balabala@gmail.com")
+                         userName: "Bala", profileImageUrl: nil, fullName: "Balakrishnan", bio: "Nothing", email: "bksnmka3B#"),
+        User(id: NSUUID().uuidString, userName: "Guna", profileImageUrl: nil, fullName: "Gojo satoru", bio: "Gotham knights", email: "balabala@gmail.com")
        
        ]
        

@@ -13,11 +13,20 @@ struct SearchProfile: View {
     var body: some View {
         NavigationLink(value: user, label: {
             HStack {
-                Image(user.profileImageUrl ?? "")
-                    .resizable()
-                    .scaledToFill()
-                    .frame(width: 40,height: 40)
-                .clipShape(Circle())
+                if let image = user.profileImageUrl {
+                    KFImage(URL(string: image))
+                        .resizable()
+                        .scaledToFill()
+                        .frame(width: 40,height: 40)
+                        .clipShape(Circle())
+                }
+                else {
+                    Image(systemName: "person.circle.fill")
+                        .resizable()
+                        .scaledToFill()
+                        .frame(width: 40,height: 40)
+                        .clipShape(Circle())
+                }
                 VStack(alignment: .leading,spacing: 1){
                     Group {
                         Text(user.userName)

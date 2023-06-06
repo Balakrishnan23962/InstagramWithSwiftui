@@ -14,12 +14,8 @@ struct ProfileHeaderView: View {
         VStack{
             VStack(spacing: 10){
                 HStack{
-                    Image(user.profileImageUrl ?? "person.fill")
-                        .resizable()
-                        .scaledToFill()
-                        .frame(width: 80, height: 80)
-                        .clipShape(Circle())
-                        Spacer()
+                    PlaceHolderView(user: user)
+                    Spacer()
                     HStack{
                         Spacer()
                         UsersStatView(value: 3, title: "Posts")
